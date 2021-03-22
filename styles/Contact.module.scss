@@ -1,0 +1,25 @@
+.contacts {
+    padding: 150px 0;
+    color: var(--white-color);
+    svg {
+        width: 26px;
+        max-height: 44px;
+    }
+    &:hover {
+        svg {
+            path.icon-color{
+                fill:  var(--primary-color);
+            }
+        }
+    }
+    a {
+        color: var(--white-color);
+        text-decoration: none;
+        margin-left: 30px;
+        font-size:30px;
+        line-height: 44px;
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+}

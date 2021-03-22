@@ -1,0 +1,13 @@
+.header {
+  z-index: 5;
+  .navbar {
+    position:fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    padding: 20px 25px;
+    pointer-events: initial;
+    background: rgba(0,0,0,0.5);
+  }
+
+}

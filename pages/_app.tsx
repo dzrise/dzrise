@@ -1,14 +1,14 @@
-import type { AppProps } from 'next/app'
-
+import {AppProps} from 'next/app';
+import {wrapper} from "../store";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
-import '../styles/globals.css'
+import '../styles/globals.scss'
 
-function App({Component,  pageProps }: AppProps) {
-    return <Component {...pageProps} />
-}
+const WrappedApp: React.FC<AppProps> = ({Component, pageProps}) => (
+    <Component {...pageProps} />
+);
 
-export default App;
+export default wrapper.withRedux(WrappedApp);
