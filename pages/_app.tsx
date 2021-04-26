@@ -7,8 +7,11 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 import '../styles/globals.scss'
 
-const WrappedApp: React.FC<AppProps> = ({Component, pageProps}) => (
-    <Component {...pageProps} />
-);
+
+const WrappedApp: React.FC<AppProps> = ({Component, pageProps}) => {
+    return (
+            <Component {...pageProps} />
+    )
+};
 
 export default wrapper.withRedux(WrappedApp);

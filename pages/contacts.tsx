@@ -8,6 +8,7 @@ import TelegramSvg from '../svg/telegram.svg'
 import WaSvg from '../svg/wa.svg'
 import Email from '../svg/email.svg'
 import style from '../styles/Contact.module.scss'
+import PageHeader from "../components/Base/PageHeader";
 
 interface IFormValues {
     email: string;
@@ -17,6 +18,13 @@ interface IFormValues {
 }
 
 const Contacts: React.FC = () =>  {
+    let fon = '/img/default-contacts-fon.jpeg'
+
+    const nav = [
+        {title: 'Главная', url: '/'},
+        {title: 'О нас', url: false}
+    ]
+
     const initialValues = {
         email: '',
         phone: '',
@@ -36,6 +44,11 @@ const Contacts: React.FC = () =>  {
     return (
         <>
             <Default>
+                <PageHeader
+                    title="Контакты"
+                    img={fon}
+                    nav={nav}
+                />
                 <Container className={style.contacts}>
                     <Row>
                         <Col md={{span: 6}}>

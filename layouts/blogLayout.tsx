@@ -2,16 +2,17 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import MainSection from "../components/MainSection"
 import ScrollToTop from "../components/ScrollToTop"
-import SideBarBlog from "../components/Blog/SideBarBlog";
+import style from "../styles/Blog.module.scss";
 
 const BlogLayout = (props) =>  {
     return (
         <>
             <ScrollToTop />
             <Header/>
-            <MainSection>
-                {props.children}
-                <SideBarBlog />
+            <MainSection >
+                <div className={style.blog}>
+                    {props.children}
+                </div>
             </MainSection>
             <Footer/>
         </>

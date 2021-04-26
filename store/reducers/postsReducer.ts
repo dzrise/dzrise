@@ -2,7 +2,7 @@ import {PostAction, PostActionTypes, PostState} from "../../types/post";
 
 const initialState: PostState = {
     posts: [],
-    error: null,
+    error: '',
 }
 
 export const postsReducer = (state = initialState, action: PostAction): PostState => {
@@ -11,6 +11,8 @@ export const postsReducer = (state = initialState, action: PostAction): PostStat
             return {...state, error: action.payload}
         case PostActionTypes.FETCH_POSTS:
             return {error: '', posts: action.payload}
+        case PostActionTypes.FETCH_POST:
+            return {...state, error: '', posts: [...state.posts, action.payload]}
         default:
             return state
     }

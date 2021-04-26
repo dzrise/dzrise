@@ -1,22 +1,28 @@
+import parse from 'html-react-parser'
 import {Container,Row,Col } from 'react-bootstrap'
 import TileFeatured from '../Base/TitleFeatured'
 import style from '../../styles/Home.module.scss'
+import { IAboutMeItem } from "../../types/page";
 
-const SectionTwo: React.FC = () =>  {
+interface IProps {
+    aboutMe: IAboutMeItem
+}
+
+const SectionTwo: React.FC<IProps> = ({aboutMe}: IProps) =>  {
         return (
             <section className={style.section_two}>
                 <Container>
                     <Row>
                         <Col md='6'>
                             <div className='mb-5'>
-                                <TileFeatured>Обо мне</TileFeatured>
-                                <p className={style.text}>Более 8 лет занимаюсь веб-разработкой.</p>
-                                <p className={style.text}>В своей работе стараюсь объединить воображение и технологии, чтобы помочь своим клиентам расти в цефровую эпоху.</p>
-                                <p className={style.text}>В 2020 мир стал другим и уже никогда не будет прежним. Я адаптируюсь. А вы?</p>
+                                <TileFeatured>{aboutMe.about_me_tilte}</TileFeatured>
+                                <div>
+                                    {parse(aboutMe.about_me_text)}
+                                </div>
                             </div>
                         </Col>
                         <Col md='6' className={style.photo}>
-                            <img src="/img/dz.png" alt=""/>
+                            <img src={aboutMe.about_me_img} alt=""/>
                         </Col>
                     </Row>
                 </Container>

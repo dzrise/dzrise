@@ -14,14 +14,17 @@ const Header: React.FC = () => {
                     <Container>
                         <Navbar.Brand href="/" onClick={handleClick} >DzRise Digital</Navbar.Brand>
                         <div className="ml-auto"></div>
-                        <Nav>
-                            <Nav.Link href="/" onClick={handleClick}>Главная</Nav.Link>
-                            <Nav.Link href="/portfolio" onClick={handleClick}>Портфолио</Nav.Link>
-                            <Nav.Link href="/services" onClick={handleClick}>Услуги</Nav.Link>
-                            <Nav.Link href="/blog" onClick={handleClick}>Блог</Nav.Link>
-                            <Nav.Link href="/aboutme" onClick={handleClick}>Обо мне</Nav.Link>
-                            <Nav.Link href="/contacts" onClick={handleClick}>Контакты</Nav.Link>
-                        </Nav>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav>
+                                <Nav.Link href="/" onClick={handleClick}>Главная</Nav.Link>
+                                <Nav.Link href="/portfolio" onClick={handleClick}>Портфолио</Nav.Link>
+                                <Nav.Link href="/services" onClick={handleClick}>Услуги</Nav.Link>
+                                <Nav.Link href="/blog" onClick={handleClick}>Блог</Nav.Link>
+                                <Nav.Link href="/aboutme" onClick={handleClick}>Обо мне</Nav.Link>
+                                <Nav.Link href="/contacts" onClick={handleClick}>Контакты</Nav.Link>
+                            </Nav>
+                        </Navbar.Collapse>
                         <Nav>
                             <Nav.Link href="/"><i className="icon-magnifier" /></Nav.Link>
                         </Nav>

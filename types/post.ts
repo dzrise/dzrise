@@ -1,34 +1,47 @@
+import { Iimg } from './acf'
+
+export interface IPostTitle {
+    rendered: string;
+}
+
+export interface IPostContent {
+    rendered: string;
+    protected: boolean;
+}
+
+export interface IPostExcerpt {
+    rendered: string;
+    protected: boolean;
+}
+
+export interface IPostAcf {
+    rendered: string;
+    protected: boolean;
+    img_prev: Iimg | boolean;
+    img_fon: Iimg | boolean;
+}
+
 export interface IPost {
-    id: string;
-    user_id: string;
-    title: string;
+    id: number;
+    date: string;
+    title: IPostTitle;
     slug: string;
-    excerpt: string;
-    content: string;
-    content_html: string;
-    published_at: string;
-    published: boolean;
-    created_at: string;
-    updated_at: string;
-    metadata: string;
-    powerseo_title: string;
-    powerseo_description: string;
-    powerseo_keywords: string;
-    powerseo_canonical_url: string;
-    powerseo_redirect_url: string;
-    powerseo_robot_index: string;
-    powerseo_robot_follow: string;
-    summary: string;
-    has_summary: boolean;
+    status: string;
+    content: IPostContent;
+    excerpt: IPostExcerpt;
+    categories: Number[];
+    tags: Number[];
+    acf: IPostAcf;
 }
 
 export interface PostState {
-    tracks: IPost[];
+    posts: IPost[];
     error: string;
 }
 
 export enum PostActionTypes {
     FETCH_POSTS = 'FETCH_POSTS',
+    FETCH_POST = 'FETCH_POST',
     FETCH_POSTS_ERROR = 'FETCH_POSTS_ERROR',
 }
 
@@ -37,9 +50,14 @@ interface FetchPostsAction {
     payload: IPost[]
 }
 
+interface FetchPostAction {
+    type: PostActionTypes.FETCH_POST;
+    payload: IPost
+}
+
 interface FetchPostsErrorAction {
     type: PostActionTypes.FETCH_POSTS_ERROR;
     payload: string
 }
 
-export type PostAction = FetchPostsAction | FetchPostsErrorAction
+export type PostAction = FetchPostsAction | FetchPostAction | FetchPostsErrorAction

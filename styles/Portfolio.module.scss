@@ -1,0 +1,122 @@
+.portfolio {
+  &_inner {
+    padding: 150px 15px;
+    h2 {
+      color: var(--white-color);
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+  &_card {
+    position: relative;
+    margin-bottom: 40px;
+    &__img {
+      min-width: 100%;
+      height: 255px;
+    }
+    &__tags {
+      display:flex;
+      justify-content:space-around;
+      align-items: center;
+      div {
+       width: 20%;
+        padding: 10px;
+      }
+    }
+    &__body {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      display: none;
+      color: var(--white);
+      text-align: center;
+      &:before {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+        background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+        transition-timing-function: cubic-bezier(.25, .25, .75, .75);
+        transition-duration: 0.4s;
+        transition-property: opacity, transform;
+        opacity: 0.7;
+      }
+      .primary-button {
+        opacity: 1;
+      }
+    }
+    &:hover,
+    &:focus {
+      .portfolio_card__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        z-index:1;
+      }
+    }
+  }
+  &_links {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 100px;
+    div{
+      display:flex;
+      flex-wrap: wrap;
+      img {
+        width: 25px;
+        height: 25px;
+        filter: invert(1);
+        margin-right: 20px;
+      }
+      a {
+        color: var(--white-color);
+        &:hover {
+          color: var(--primary-color);
+          border-bottom: 2px solid var(--primary-color);
+          margin-bottom: -2px;
+        }
+        &.active {
+          color: var(--primary-color);
+          border-bottom: 2px solid var(--primary-color);
+          margin-bottom: -2px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .portfolio {
+    &_inner {
+      padding: 50px 15px;
+    }
+    h2 {
+      font-size: 1.7rem;
+    }
+    &_links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: normal;
+      font-size: 0.8rem;
+      a {
+        padding: 0.5rem;
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

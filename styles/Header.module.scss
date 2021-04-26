@@ -9,5 +9,12 @@
     pointer-events: initial;
     background: rgba(0,0,0,0.5);
   }
+}
 
+@media (max-width: 575.98px) {
+  .header {
+    .navbar {
+      background: rgba(0,0,0,0.8);
+    }
+  }
 }

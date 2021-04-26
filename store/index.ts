@@ -1,6 +1,6 @@
-import {Context, createWrapper, MakeStore} from "next-redux-wrapper";
+import {createWrapper, MakeStore} from "next-redux-wrapper";
 import {AnyAction, applyMiddleware, createStore} from "redux";
-import thunkMiddleware, {ThunkAction, ThunkDispatch} from "redux-thunk";
+import thunkMiddleware, {ThunkDispatch} from "redux-thunk";
 import {reducer, RootState} from "./reducers";
 
 const bindMiddleware = (middleware) => {
@@ -11,7 +11,7 @@ const bindMiddleware = (middleware) => {
     return applyMiddleware(...middleware)
 }
 
-const makeStore: MakeStore<RootState> = (context: Context) => {
+const makeStore: MakeStore<RootState> = () => {
     return createStore(reducer, bindMiddleware([thunkMiddleware]))
 }
 

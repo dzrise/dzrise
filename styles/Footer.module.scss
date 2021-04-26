@@ -14,3 +14,23 @@
     color: var(--white-color);
   }
 }
+@media (max-width: 575.98px) {
+  .footer {
+    section {
+      padding: 50px 0;
+    }
+    .logo {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .copyright {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    a {
+      text-align: center;
+    }
+  }
+}
