@@ -2,7 +2,7 @@
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 <h3 align="center">Go, js/ts, php full stack developer</h3>
 
-[![dzrise's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=dzrise)]
+![dzrise's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=dzrise&theme=github-compact)
 
 <!--
 **dzrise/dzrise** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
