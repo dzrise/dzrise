@@ -5,7 +5,7 @@
 ![dzrise's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=dzrise&theme=github-compact)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dzrise&layout=normal&theme=dark#gh-dark-mode-only)
-![codewars](https://www.codewars.com/users/dzrise_rock/badges/large)
+![Leetcode Stats](https://leetcard.jacoblin.cool/dzrise_rock)
 <!--
 **dzrise/dzrise** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
