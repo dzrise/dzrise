@@ -3,10 +3,9 @@
 <h3 align="center">Go, js/ts, php full stack developer</h3>
 
 ![dzrise's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=dzrise&theme=github-compact)
-|**Information A**|**Information B**|
+|****|****|
 |:---:|:---:|
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dzrise&layout=compact&theme=dark#gh-dark-mode-only)
-![Leetcode Stats](https://leetcard.jacoblin.cool/dzrise_rock)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dzrise&layout=compact&theme=dark#gh-dark-mode-only)|![Leetcode Stats](https://leetcard.jacoblin.cool/dzrise_rock)
 
 
 <!--
